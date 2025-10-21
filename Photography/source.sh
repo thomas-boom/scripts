@@ -10,7 +10,7 @@ mkdir -p "$DEST"
 echo "Zoeken naar afbeeldingen in: $SOURCE"
 
 # Zoeken en kopiëren
-find "$SOURCE" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.tif" -o -iname "*.tiff" \) -exec cp "{}" "$DEST" \; 2>/dev/null
+find "$SOURCE" -type f \( -iname "*.RAF" -o -iname "*.ARW" \) -exec cp "{}" "$DEST" \; 2>/dev/null
 
 # Volledige rechten aan jezelf geven
 chmod -R u+rwx "$DEST"

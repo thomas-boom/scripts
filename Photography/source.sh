@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Bronmap op externe schijf
-SOURCE="/Volumes/iSSD/WdKA/deFine Arts/"
+SOURCE="edit this to folder that needs to be seperated"
 
 # Doelmap op je bureaublad
-DEST=~/Desktop/GevondenFotos
+DEST=~/Desktop/FoundPictures
 mkdir -p "$DEST"
 
-echo "Zoeken naar afbeeldingen in: $SOURCE"
+echo "Looking for images in: $SOURCE"
 
 # Zoeken en kopiëren
 find "$SOURCE" -type f \( -iname "*.RAF" -o -iname "*.ARW" \) -exec cp "{}" "$DEST" \; 2>/dev/null
@@ -16,5 +16,5 @@ find "$SOURCE" -type f \( -iname "*.RAF" -o -iname "*.ARW" \) -exec cp "{}" "$DE
 chmod -R u+rwx "$DEST"
 chown -R "$(whoami)" "$DEST" 2>/dev/null
 
-echo "Klaar! Afbeeldingen zijn gekopieerd naar: $DEST"
-echo "Je hebt nu volledige rechten op de bestanden."
+echo "All images are copied to folder: $DEST"
+echo "Rights have been given to files."

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# 📁 Bronmap waar de foto's nu staan
+#Bronmap waar de foto's nu staan
 SOURCE_DIR=~/Desktop/GevondenFotos
 
-# ☁️ Doelmap (iCloud Foto's)
+#Doelmap (iCloud Foto's)
 DEST_DIR="/Users/thomasboom/Library/Mobile Documents/com~apple~CloudDocs/Foto's"
 
 # Controleer of bronmap bestaat
@@ -50,5 +50,5 @@ find "$SOURCE_DIR" -type f | while read -r file; do
 done
 
 echo
-echo "✅ Klaar! Alle foto's zijn verplaatst naar:"
+echo "Klaar! Alle foto's zijn verplaatst naar:"
 echo "$DEST_DIR"
